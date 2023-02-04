@@ -1,0 +1,18 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: max-content;
+  width: max-content;
+  position: relative;
+  overflow: hidden;
+}
+
+#gameCanvas {
+  background-color: #0f0;
+}
+
+/* .hit-box { background-color: #0f0; } */
