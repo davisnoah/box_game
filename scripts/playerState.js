@@ -69,12 +69,12 @@ class PlayerState extends State {
     if (Math.abs(this.player.vx) > Math.abs(this.player.maxVX)) this.player.vx = xDirection * this.player.maxVX;
     if (Math.abs(this.player.vy) > Math.abs(this.player.maxVY)) this.player.vy = yDirection * this.player.maxVY;
 
+    // Detect collision to player
+    this.player.detectCollision();
+
     // Prevent player speed from being numbers between 0.01 and 0 
     if (Math.abs(this.player.vx) < 0.01) this.player.vx = 0;
     if (Math.abs(this.player.vy) < 0.01) this.player.vy = 0;
-
-    // Detect collision to player
-    this.player.detectCollision();
 
     // Apply velocity to player
     this.player.x += this.player.vx;
